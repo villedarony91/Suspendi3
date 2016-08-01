@@ -1,0 +1,6 @@
+c:\users\rjlopez\documents\visual studio 2013\Projects\Suspendidos\Suspendidos\bin\Suspendidos.dll.config
+c:\users\rjlopez\documents\visual studio 2013\Projects\Suspendidos\Suspendidos\bin\Suspendidos.dll
+c:\users\rjlopez\documents\visual studio 2013\Projects\Suspendidos\Suspendidos\bin\Suspendidos.pdb
+c:\users\rjlopez\documents\visual studio 2013\Projects\Suspendidos\Suspendidos\obj\Debug\Suspendidos.csprojResolveAssemblyReference.cache
+c:\users\rjlopez\documents\visual studio 2013\Projects\Suspendidos\Suspendidos\obj\Debug\Suspendidos.dll
+c:\users\rjlopez\documents\visual studio 2013\Projects\Suspendidos\Suspendidos\obj\Debug\Suspendidos.pdb

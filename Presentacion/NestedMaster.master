@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Presentacion/Master.Master" AutoEventWireup="true" CodeBehind="NestedMaster.master.cs" Inherits="Suspendidos.Presentacion.NestedMaster" %>
+
+<asp:Content ID="PersonData" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <div>
+    <div class="container">
+        <h5>Datos del Ciudadano</h5>
+        <div class="row">
+            <div class="input-field col s1">
+                <input disabled id="Estado" type="text" class="validate" runat="server">
+                <label for="disabled">Estado</label>
+            </div>
+            <div class="input-field col s3">
+                <input disabled id="Boleta" type="text" class="validate" runat="server">
+                <label for="disabled">N&uacute;mero de Boleta</label>
+            </div>
+            <div class="input-field col s3">
+                <input disabled value="DPI" id="Dpi" type="text" class="validate" runat="server">
+                <label for="disabled">DPI</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s2">
+                <input disabled id="firstName" type="text" class="validate" runat="server">
+                <label for="disabled">Primer Nombre</label>
+            </div>
+            <div class="input-field col s2">
+                <input disabled  id="SecondName" type="text" class="validate" runat="server">
+                <label for="disabled">Segundo Nombre</label>
+            </div>
+            <div class="input-field col s2">
+                <input disabled  id="LastName1" type="text" class="validate" runat="server">
+                <label for="disabled">Primer apellido</label>
+            </div>
+            <div class="input-field col s2">
+                <input disabled id="LastName2" type="text" class="validate" runat="server">
+                <label for="disabled">Segundo apellido</label>
+            </div>
+            <div class="input-field col s2">
+                <input disabled id="LastName3" type="text" class="validate" runat="server">
+                <label for="disabled">Tercer apellido</label>
+            </div>
+        </div>
+    </div>
+        </div>
+    <div style="background-color:#bbdefb ">
+    <div class="divider"></div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server" >
+
+        </asp:ContentPlaceHolder>
+        </div>
+</asp:Content>
+
