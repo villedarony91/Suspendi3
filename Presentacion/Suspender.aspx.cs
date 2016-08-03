@@ -11,6 +11,8 @@ namespace Suspendidos.Presentacion
     public partial class Suspender : System.Web.UI.Page
     {
         Utility util = new Utility();
+        static Suspendido suspendido = new Suspendido();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -60,11 +62,58 @@ namespace Suspendidos.Presentacion
             {
                 Page.ClientScript.RegisterStartupScript(GetType(),
                     "", "Materialize.toast('Date validation', 3000, 'rounded');", true);
+                saveSuspendidoData();
 
             }else{
                 Page.ClientScript.RegisterStartupScript(GetType(),
                     "", "Materialize.toast('Date failed', 3000, 'rounded');", true);
             }
+        }
+
+        protected void location_Click(object sender, EventArgs e)
+        {
+            suspendido.DepJuzgado = selectDepto.SelectedIndex + 1;
+            suspendido.MunJuzgado = selectMun.SelectedIndex + 1;
+            selectDepto.Disabled = true;
+            selectMun.Disabled = true;
+            btn2.Disabled = true;
+            enableControls();
+        }
+
+        private void enableControls()
+        {
+            TipoJuz.Disabled = false;
+            TipoSuspension.Disabled = false;
+            NoJuzgado.Disabled = false;
+            Ingreso.Disabled = false;
+            Egreso.Disabled = false;
+            Condena.Disabled = false;
+            Providencia.Disabled = false;
+            Resolucion.Disabled = false;
+            TextObservaciones.Disabled = false;
+        }
+
+        private bool saveSuspendidoData()
+        {
+            Utility utils = new Utility();
+            suspendido.TipoSuspension = TipoSuspension.SelectedIndex;
+            //TODO: convertir a T o J
+            suspendido.TipoTJ = TipoJuz.SelectedIndex;
+            int noJuzgado;
+            if(!int.TryParse(NoJuzgado.Value,out noJuzgado)){
+                return false;
+            }
+            else
+            {
+                suspendido.NoJuzgado = noJuzgado;
+            }
+            suspendido.FecIngreso = utils.convertToDate(Ingreso.Value);
+            suspendido.FecEgreso = utils.convertToDate(Egreso.Value);
+            suspendido.Condena = Condena.Value;
+            suspendido.Oficio = Providencia.Value;
+            suspendido.Resolucion = Providencia.Value;
+            suspendido.Observaciones = TextObservaciones.Value;
+            return true;
         }
     }
 }

@@ -73,6 +73,14 @@ using Suspendidos.Presentacion;
             return mun;
         }
 
+        public DateTime convertToDate(string date)
+        {
+            DateTime dateConverted = new DateTime();
+            if(!DateTime.TryParse(date,out dateConverted)){
+                //TODO:Agregar trace
+           }
+            return dateConverted;
+        }
   
 
     }

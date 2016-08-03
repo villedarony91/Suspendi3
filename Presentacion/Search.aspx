@@ -100,7 +100,7 @@
         </a>
         <ul>
             <li><a class="btn-floating blue"><i class="material-icons">clear_all</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">thumb_up</i></a></li>
+            <li><a class="btn-floating green" id="float_enable" runat="server" onserverclick="float_enable_ServerClick"><i class="material-icons">thumb_up</i></a></li>
             <li><a class="btn-floating red" id="float_suspend" runat="server" onserverclick="float_suspend_ServerClick"><i class="material-icons">thumb_down</i></a></li>
         </ul>
     </div>

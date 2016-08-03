@@ -132,7 +132,7 @@ namespace Suspendidos
 
         protected void float_suspend_ServerClick(object sender, EventArgs e)
         {
-            if(su!= null && su.cd != null && su.cd.Filled)
+            if (validateSearch())
             {
                 Response.Redirect("Suspender.aspx");
             }
@@ -140,8 +140,25 @@ namespace Suspendidos
             {
                 Page.ClientScript.RegisterStartupScript(GetType(),
                    "", "Materialize.toast('Debe de realizar uan busqueda', 3000, 'rounded');", true);
+            }   
+        }
+
+        protected void float_enable_ServerClick(object sender, EventArgs e)
+        {
+            if (validateSearch())
+            {
+                Response.Redirect("Enable.aspx");
             }
-                
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(GetType(),
+                   "", "Materialize.toast('Debe de realizar uan busqueda', 3000, 'rounded');", true);
+            }   
+        }
+
+        public Boolean validateSearch()
+        {
+            return su != null && su.cd != null && su.cd.Filled;
         }
     }
 }

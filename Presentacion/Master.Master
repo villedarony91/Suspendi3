@@ -25,10 +25,12 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="Search.aspx">Buscar</a></li>
                     <li><a href="Suspender.aspx">Suspender</a></li>
+                    <li><a href="Enable.aspx">Habilitar</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                      <li><a href="Search.aspx">Buscar</a></li>
                     <li><a href="Suspender.aspx">Suspender</a></li>
+                    <li><a href="Enable.aspx">Habilitar</a></li>
                 </ul>
             </div>
         </nav>

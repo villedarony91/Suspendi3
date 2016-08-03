@@ -42,7 +42,7 @@
         </div>
     </div>
         </div>
-    <div style="background-color:#bbdefb ">
+    <div style="border:10px dashed #2979ff; background-color:#bbdefb">
     <div class="divider"></div>
             <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server" >
 

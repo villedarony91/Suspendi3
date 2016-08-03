@@ -148,6 +148,15 @@ namespace Suspendidos {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Municipio;
         
         /// <summary>
+        /// Control float_enable.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor float_enable;
+        
+        /// <summary>
         /// Control float_suspend.
         /// </summary>
         /// <remarks>
